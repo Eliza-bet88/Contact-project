@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #1a1a2e;
+  color: #e0e0e0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 28px 40px;
+  border-bottom: 1px solid rgb(255 255 255 / 10%);
+}
+
+.header h1 {
+  position: absolute;
+  left: 50%;
+  margin: 0;
+  color: #00d4ff;
+  font-size: 46px;
+  transform: translateX(-50%);
+}
+
+.language-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.language-buttons button {
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 12px;
+  background: rgb(0 180 220 / 20%);
+  color: #00d4ff;
+  font-weight: 700;
+}
+
+.contacts-page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 36px 20px;
+}
+
+.add-btn {
+  display: block;
+  margin: 26px auto;
+  padding: 16px 44px;
+  border: 0;
+  border-radius: 12px;
+  background: #00d966;
+  color: white;
+  font-weight: 700;
+}
