@@ -1,25 +1,24 @@
-function App() {
+import { useState } from 'react'
+import Contacts from './pages/Contacts'
+import { getText } from './i18n/i18n'
+
+export default function App() {
+  const [lang, setLang] = useState('en')
+
   return (
     <main className="app">
-      <header className="header">
-        <div className="language-buttons">
-          <button type="button">EN</button>
-          <button type="button">LV</button>
+      <header>
+        <div className="lang">
+          <button type="button" onClick={() => setLang('en')}>EN</button>
+          <button type="button" onClick={() => setLang('lv')}>LV</button>
         </div>
-        <h1>CONTACT APP</h1>
+
+        <div className="header-title">
+          <h1>{getText('title', lang)}</h1>
+        </div>
       </header>
 
-      <section className="contacts-page">
-        <div className="actions">
-          <button className="add-btn" type="button">
-            ADD CONTACT
-          </button>
-        </div>
-
-        <div className="contacts-list"></div>
-      </section>
+      <Contacts lang={lang} />
     </main>
   )
 }
-
-export default App
