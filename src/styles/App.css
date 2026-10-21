@@ -42,18 +42,25 @@ header h1 {
   font-size: 42px;
 }
 
-.lang {
+.lang,
+.contact-buttons,
+.form-buttons {
   display: flex;
   gap: 10px;
 }
 
-.lang button {
+.lang button,
+.save-btn,
+.cancel-btn {
   padding: 10px 18px;
   border: 0;
   border-radius: 8px;
+  font-weight: bold;
+}
+
+.lang button {
   background: #00d4ff;
   color: #1a1a2e;
-  font-weight: bold;
 }
 
 .contacts-page {
@@ -62,14 +69,18 @@ header h1 {
   padding: 40px 20px;
 }
 
-.search-input {
+.search-input,
+.form-card input {
   width: 100%;
-  margin-bottom: 25px;
   padding: 14px;
   border: 1px solid #33334c;
   border-radius: 8px;
   background: #25253d;
   color: white;
+}
+
+.search-input {
+  margin-bottom: 25px;
 }
 
 .add-btn {
@@ -90,8 +101,89 @@ header h1 {
 }
 
 .contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 16px;
   border: 1px solid #33334c;
   border-radius: 8px;
   background: #25253d;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h3,
+.contact-detail {
+  margin: 0 0 6px;
+}
+
+.contact-info h3 {
+  color: #00d4ff;
+}
+
+.contact-detail {
+  color: #c0c0c8;
+}
+
+.cancel-btn {
+  background: #ff6464;
+  color: white;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.edit-btn {
+  background: rgba(0, 212, 255, 0.15);
+  color: #00d4ff;
+}
+
+.delete-btn {
+  background: rgba(255, 100, 100, 0.15);
+  color: #ff6464;
+}
+
+.save-btn {
+  flex: 1;
+  background: #00d966;
+  color: white;
+}
+
+.cancel-btn {
+  flex: 1;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.form-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 10px;
+  background: #25253d;
+}
+
+.form-card h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.form-card input {
+  margin-bottom: 12px;
 }
